@@ -22,8 +22,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="titre">Url de la vidéo</label>
-                    <input type="text" class="form-control" id="titre" name="url" placeholder="Entrez l'url" required>
+                    <label for="url">Url de la vidéo</label>
+                    <input type="text" class="form-control" id="url" name="url" placeholder="Entrez l'url" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Enregistrer</button>

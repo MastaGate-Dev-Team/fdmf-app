@@ -17,7 +17,8 @@
         <li class="nav-item active">
             <a class="nav-link" href="{{ url('') }}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <span>Dashboard</span>
+            </a>
         </li>
 
         <!-- Divider -->
@@ -54,7 +55,7 @@
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="{{ url('benevoles') }}">
                 <i class="fas fa-users fa-chart-area"></i>
                 <span>Liste de Bénévoles</span></a>
         </li>

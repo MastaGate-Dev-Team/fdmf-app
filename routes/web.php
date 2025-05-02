@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\VolunteerController;
 use Illuminate\Support\Facades\Route;
 
 /* Route::get('/', function () {
@@ -31,6 +33,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/video', [VideoController::class, 'store'])->name('video.store');
     Route::put('/video/{id}', [VideoController::class, 'update'])->name('video.update');
     Route::delete('/video/{id}', [VideoController::class, 'destroy'])->name('video.destroy');
+
+    Route::get('/benevoles', [VolunteerController::class, 'index'])->name('volunteer.index');
+    Route::get('/addbenevole', [VolunteerController::class, 'addVolunteer'])->name('volunteer.addVolunteer');
+    Route::post('addbenevole', [VolunteerController::class, 'store'])->name('volunteer.store');
+
+    Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+    Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog.show');
 });
 
 require __DIR__.'/auth.php';
