@@ -28,6 +28,7 @@
                         <tr>
                             <th>Titre</th>
                             <th>Contenu</th>
+                            <th>Image</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -35,6 +36,7 @@
                         <tr>
                             <th>Titre</th>
                             <th>Contenu</th>
+                            <th>Image</th>
                             <th>Actions</th>
                         </tr>
                     </tfoot>
@@ -46,8 +48,16 @@
                         @endif
                         @foreach ($articles as $article)
                             <tr>
-                                <td>{{ $article->titre }}</td>
-                                <td>{{ $article->contenu }}</td>
+                                <td class="text-center">{{ $article->titre }}</td>
+                                <td class="text-center">{{ $article->contenu }}</td>
+                                <td class="text-center">
+                                    @if($article->image)
+                                        <img src="{{ asset('images/' . $article->image) }}" alt="Image de l'article" class="rounded-circle" width="60" height="60">
+                                    @else
+                                        <span class="text-muted">Aucune image</span>
+                                    @endif
+                                </td>
+
                                 <td class="text-center">
                                     <!-- Icône Modifier -->
                                     <a href="{{ url('UpdateArticle', $article->id) }}" class="btn btn-sm btn-primary" title="Modifier">

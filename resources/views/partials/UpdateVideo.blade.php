@@ -27,6 +27,11 @@
                     <input type="text" class="form-control" id="url" name="url" value="{{ old('url', $video->url) }}" placeholder="Entrez l'url" required>
                 </div>
 
+                <div class="form-group">
+                    <label for="content">Contenu de le vidéo</label>
+                    <input type="text" class="form-control" id="content" name="content" value="{{ old('url', $video->content) }}" placeholder="Entrez le contenu de la vidéo" required>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Modifier</button>
             </form>
         </div>

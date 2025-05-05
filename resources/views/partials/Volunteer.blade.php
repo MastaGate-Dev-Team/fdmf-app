@@ -62,9 +62,9 @@
                                 <td>{{ $volunteer->email }}</td>
                                 <td class="text-center">
                                     <!-- Icône Modifier -->
-                                    <a href="{{ url('UpdateVideo', $volunteer->id) }}" class="btn btn-sm btn-primary" title="Modifier">
+                                    <!-- <a href="{{ url('UpdateVideo', $volunteer->id) }}" class="btn btn-sm btn-primary" title="Modifier">
                                         <i class="bi bi-pencil-square"></i>
-                                    </a>
+                                    </a> -->
                                     <!-- Icône Supprimer -->
                                     <form action="{{ route('video.destroy', $volunteer->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette vidéo ?');">
                                         @csrf

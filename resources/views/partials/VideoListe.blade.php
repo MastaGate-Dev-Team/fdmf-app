@@ -28,6 +28,7 @@
                         <tr>
                             <th>Titre</th>
                             <th>Url</th>
+                            <th>Contenu</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -35,6 +36,7 @@
                         <tr>
                             <th>Titre</th>
                             <th>Url</th>
+                            <th>Contenu</th>
                             <th>Actions</th>
                         </tr>
                     </tfoot>
@@ -48,6 +50,7 @@
                             <tr>
                                 <td>{{ $video->titre }}</td>
                                 <td>{{ $video->url }}</td>
+                                <td>{{ $video->content }}</td>
                                 <td class="text-center">
                                     <!-- Icône Modifier -->
                                     <a href="{{ url('UpdateVideo', $video->id) }}" class="btn btn-sm btn-primary" title="Modifier">

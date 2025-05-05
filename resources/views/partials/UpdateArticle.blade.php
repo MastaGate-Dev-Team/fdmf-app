@@ -13,7 +13,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Modifier un article</h6>
         </div>
         <div class="card-body">
-            <form action="{{ route('article.update', $post->id) }}" method="POST">
+            <form action="{{ route('article.update', $post->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
@@ -25,6 +25,11 @@
                 <div class="form-group">
                     <label for="contenu">Contenu</label>
                     <textarea class="form-control" id="contenu" name="contenu" rows="5" placeholder="Entrez le contenu" required> {{ old('contenu', $post->contenu) }} </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" class="form-control" id="image" name="image" value="{{ old('image', $post->image) }}" placeholder="Choisissez une image" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Modifier</button>

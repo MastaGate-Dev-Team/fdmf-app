@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\DashbordController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\VolunteerController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 /* Route::get('/', function () {
@@ -12,8 +14,34 @@ use Illuminate\Support\Facades\Route;
 }); */
 
 Route::get('/', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return view('siteView.index');
+})->name('site.home');;
+
+Route::get('/about', function () {
+    return view('siteView.about');
+});
+
+Route::get('/services', function () {
+    return view('siteView.service');
+});
+
+Route::get('/videos', [VideoController::class, 'indexPage']);
+
+Route::get('/news', function () {
+    $posts = Post::all();
+    $recentPost = Post::orderBy('created_at', 'desc')->take(3)->get(); 
+    return view('siteView.blog')->with(['posts' => $posts, 'recentPosts' => $recentPost]);
+});
+
+Route::get('/contact', function () {
+    return view('siteView.contact');
+});
+
+Route::get('/inscription', function () {
+    return view('siteView.inscription');
+});
+
+Route::get('/dashbord',[DashbordController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

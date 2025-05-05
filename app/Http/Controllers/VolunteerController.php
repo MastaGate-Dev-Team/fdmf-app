@@ -51,9 +51,8 @@ class VolunteerController extends Controller
 
         $volunteer->save();
 
-        return redirect()->route('volunteer.index')
-                     ->with('success', 'Membre ajouté avec succès !')
-                     ->with('volunteers', $volunteer);
+        return redirect()->route('site.home')
+                     ->with('success', 'Enregistrement effectué avec succès !');
     }
 
     public function update(Request $request, $id)

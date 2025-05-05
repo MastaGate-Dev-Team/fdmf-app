@@ -13,11 +13,18 @@ class VideoController extends Controller
         return view('partials.VideoListe')->with('videos', $videos);
     }
 
+    public function indexPage()
+    {
+        $videos = Video::all();
+        return view('siteView.video')->with('videos', $videos);
+    }
+
     public function store(Request $request)
     {
     $videos = Video::create($request->validate([
         'titre' => 'required|string|max:255',
         'url' => 'required|string',
+        'content' => 'nullable|string',
     ]));
 
     return redirect()->route('video.index')
@@ -50,12 +57,14 @@ class VideoController extends Controller
         $request->validate([
             'titre' => 'required|string|max:255',
             'url' => 'required|string',
+            'content' => 'nullable|string',
         ]);
     
         $video = Video::findOrFail($id);
 
         $video->titre = $request->input('titre');
         $video->url = $request->input('url');
+        $video->content = $request->input('content');
         $video->save();
 
     // Redirection avec message de succès

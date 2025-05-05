@@ -2,7 +2,7 @@
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('') }}">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('dashbord') }}">
             <div class="sidebar-brand-icon rotate-n-15">
                 <!-- logo -->
             </div>
@@ -13,8 +13,8 @@
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ url('') }}">
+        <li class="nav-item {{ Request::is('/dashbord') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ url('dashbord') }}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </a>
@@ -57,7 +57,7 @@
         <li class="nav-item {{ Request::is('benevoles') ? 'active' : '' }}">
             <a class="nav-link" href="{{ url('benevoles') }}">
                 <i class="fas fa-users fa-chart-area"></i>
-                <span>Liste de Bénévoles</span>
+                <span>Liste de Membres</span>
             </a>
         </li>
 

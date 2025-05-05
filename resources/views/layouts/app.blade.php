@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Dashboard')</title>
-    <link rel="icon" href="data:,">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="fdmf.mastagate.com/img/favicon.png">
     
     <!-- CSS -->
     <link href="{{ asset('sb-admin-2/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
