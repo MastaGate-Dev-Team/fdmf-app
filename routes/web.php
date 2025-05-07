@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 }); */
 
 Route::get('/', function () {
-    return view('siteView.index');
-})->name('site.home');;
+    $recentPost = Post::orderBy('created_at', 'desc')->take(3)->get();
+    return view('siteView.index')->with(['recentPosts' => $recentPost]);
+})->name('site.home');
 
 Route::get('/about', function () {
     return view('siteView.about');

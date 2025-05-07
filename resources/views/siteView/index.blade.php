@@ -777,6 +777,43 @@
 		</section>
 		<!-- End Equipements -->
 
+		<!-- Actualité -->
+		<section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Actualités</h2>
+							<img src="fdmf.mastagate.com/img/section-img.png" alt="#">
+							<p>Nos articles les plus récents</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					@foreach($recentPosts as $recentPost)
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news h-100">
+							<div class="news-head">
+								<img src="{{ asset('images/' . $recentPost->image) }}" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									
+									<h2><a href="#"> <strong>{{ $recentPost->titre }}</strong></a></h2>
+									<p class="text">{{ $recentPost->contenu }}</p>
+									
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					@endforeach
+				</div>
+			</div>
+		</section>
+		<!-- End Actualité -->
+
         @endsection
 
         @push('scripts')

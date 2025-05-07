@@ -25,31 +25,44 @@
 <!-- End Breadcrumbs -->
 <!-- Start Video -->
 
-<section class="video section">
-    @foreach($videos as $video)
+<!-- Start Video -->
+<section class="blog section" id="videos">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-12">
-                <div class="video-inner">
-                    <div class="video-content">
-                        <h3>{{ $video->titre }}</h3>
-                        <p>{{ $video->content }}</p>
-                    </div>
-                    <div class="video-box">
-                        <iframe width="100%" height="500"
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Vidéos</h2>
+                    <p>Nos vidéos explicatives</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach($videos as $video)
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Single Video Card -->
+                <div class="single-news h-100">
+                    <div class="news-head">
+                        <iframe width="100%" height="215"
                             src="https://www.youtube.com/embed/{{ basename($video->url) }}"
                             frameborder="0"
                             allowfullscreen>
                         </iframe>
                     </div>
+                    <div class="news-body">
+                        <div class="news-content">
+                            <h2><strong>{{ $video->titre }}</strong></h2>
+                            <p class="text">{{ $video->content }}</p>
+                        </div>
+                    </div>
                 </div>
+                <!-- End Single Video Card -->
             </div>
+            @endforeach
         </div>
     </div>
-    <br>
-    <br>
-    @endforeach
-</section>  
+</section>
+<!-- End Video -->
+  
 <!-- End Video -->
 
 @endsection
