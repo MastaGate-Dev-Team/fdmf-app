@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Volunteer')
+@section('title', 'Membres')
 
 @section('content')
 <!-- Begin Page Content -->
@@ -11,7 +11,7 @@
         <div class="alert alert-success" id="success-alert">
             {{ session('success') }}
             @if(session('volunteer'))
-                <br><strong>Bénévoles ajouté :</strong> {{ session('volunteer')->nom }}
+                <br><strong>Membre ajouté :</strong> {{ session('volunteer')->nom }}
             @endif
         </div>
     @endif
@@ -19,7 +19,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Liste des bénévoles</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Liste des membres</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">

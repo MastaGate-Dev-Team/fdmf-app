@@ -23,7 +23,9 @@ class DashbordController extends Controller
             'videos' => $videos, */
             'nbrArticle' => $nbrArticle,
             'nbrVideo' => $nbrVideo,
-            'nbrVolunteer' => $nbrVolunteer
+            'nbrVolunteer' => $nbrVolunteer,
+            'recentVideos' => $videos->take(3),
+            'recentArticles' => $articles->take(3),
         ]);
     }
 }
