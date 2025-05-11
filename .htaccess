@@ -1,4 +1,4 @@
 RewriteEngine On
 
 # Rediriger toutes les requêtes vers public/
-RewriteRule ^(.*)$ laravel/public/$1 [L]
+RewriteRule ^(.*)$ public/$1 [L]
