@@ -25,7 +25,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="{{ url('') }}"><img src="fdmf.mastagate.com/img/logo.png" alt="#"></a>
+									<a href="{{ url('') }}"><img src="{{ asset('images/logo.png') }}" alt="#"></a>
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->

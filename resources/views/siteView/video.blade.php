@@ -51,7 +51,6 @@
                     <div class="news-body">
                         <div class="news-content">
                             <h2><strong>{{ $video->titre }}</strong></h2>
-                            <p class="text">{{ $video->content }}</p>
                         </div>
                     </div>
                 </div>

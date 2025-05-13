@@ -26,7 +26,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10">
-                <div class="single-main text-center">
+                <div class="single-main">
                     <div class="news-head mb-4">
                         <img src="{{ asset('images/' . $post->image) }}" alt="Image de l'article" class="img-fluid rounded">
                     </div>
