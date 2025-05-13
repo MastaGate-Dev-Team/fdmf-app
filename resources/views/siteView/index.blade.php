@@ -24,8 +24,8 @@
 									<h1 class="">Rejoignez notre <span></span>  <span>mutuelle de santé</span></h1>
 									<p class="">L’association a pour mission d’améliorer dans son aire d’activité, de manière permanente la Santé Bucco–dentaire de la population et l’information sur les maladies de la bouche et des dents conformément à la mission assignée par le programme National de la Santé Bucco–dentaire.</p>
 									<div class="button">
-										<a href="inscription.php" class="btn">S'inscrire</a>
-										<a href="about.php" class="btn primary">A propos</a>
+										<a href="{{ url('inscription') }}" class="btn">S'inscrire</a>
+										<a href="{{ url('about') }}" class="btn primary">A propos</a>
 									</div>
 								</div>
 							</div>
@@ -43,8 +43,8 @@
 									<p>La Santé Bucco-Dentaire est notre souci quotidien qu’on se le dise
 										 </p>
 								<div class="button">
-										<a href="inscription.php" class="btn">S'inscrire</a>
-										<a href="about.php" class="btn primary">A propos</a>
+										<a href="{{ url('inscription') }}" class="btn">S'inscrire</a>
+										<a href="{{ url('about') }}" class="btn primary">A propos</a>
 									</div>
 								</div>
 							</div>
@@ -61,8 +61,8 @@
 									<h1>Fondation  <span>FDMF </span>  <span></span></h1>
 									<p>La Fondation FDMF est une organisation à but non lucratif dédiée à l’amélioration de la santé bucco-dentaire pour tous, en particulier les populations vulnérables et marginalisées.  </p>
 									<div class="button">
-										<a href="inscription.php" class="btn">S'inscrire</a>
-										<a href="about.php" class="btn primary">A propos</a>
+										<a href="{{ url('inscription') }}" class="btn">S'inscrire</a>
+										<a href="{{ url('about') }}" class="btn primary">A propos</a>
 									</div>
 								</div>
 							</div>
@@ -92,7 +92,7 @@
 								  notre création en [année], nous œuvrons sans relâche pour faire de l’accès aux soins dentaires une réalité universelle, 
 								  car nous croyons qu’un sourire sain est un droit fondamental.</p>
 								  
-							<a href="about.php" class="btn-primary btn">En savoir plus</a>
+							<a href="{{ url('about') }}" class="btn-primary btn">En savoir plus</a>
 						</div>
 						<!-- End Choose Left -->
 					</div>
@@ -307,7 +307,7 @@
 
 
 
-							<a href="inscription.php" class="btn-primary btn">Nous rejoindre</a>
+							<a href="{{ url('inscription') }}" class="btn-primary btn">Nous rejoindre</a>
 						</div>
 						<!-- End Choose Left -->
 					</div>
@@ -340,8 +340,8 @@
 							<h2>Besoin d'une consultation dentaire de toute urgence ?</h2>
 							<p>Contactez - nous sans rien attendre car nous savons comment vous prendre en charge de manière efficiente</p>
 							<div class="button">
-								<a href="contact.php" class="btn">Contacter</a>
-								<a href="services.php" class="btn second">EN savoir plus<i class="fa fa-long-arrow-right"></i></a>
+								<a href="{{ url('contact') }}" class="btn">Contacter</a>
+								<a href="{{ url('services') }}" class="btn second">EN savoir plus<i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
