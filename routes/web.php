@@ -9,9 +9,6 @@ use App\Http\Controllers\VolunteerController;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
-/* Route::get('/', function () {
-    return view('welcome');
-}); */
 
 Route::get('/', function () {
     $recentPost = Post::orderBy('created_at', 'desc')->take(3)->get();
@@ -33,6 +30,11 @@ Route::get('/news', function () {
     $recentPost = Post::orderBy('created_at', 'desc')->take(3)->get(); 
     return view('siteView.blog')->with(['posts' => $posts, 'recentPosts' => $recentPost]);
 });
+
+Route::get('/news/{id}', function ($id) {
+    $post = Post::findOrFail($id);
+    return view('siteView.blogDetails')->with(['post' => $post]);
+})->name('blogD.show');
 
 Route::get('/contact', function () {
     return view('siteView.contact');

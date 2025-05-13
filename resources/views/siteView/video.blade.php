@@ -13,7 +13,7 @@
                 <div class="col-12">
                     <h2>Video</h2>
                     <ul class="bread-list">
-                        <li><a href="index.php">Accueil</a></li>
+                        <li><a href="{{ url('') }}">Accueil</a></li>
                         <li><i class="icofont-simple-right"></i></li>
                         <li class="active">Video</li>
                     </ul>   

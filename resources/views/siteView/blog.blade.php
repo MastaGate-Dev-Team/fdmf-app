@@ -13,7 +13,7 @@
 						<div class="col-12">
 							<h2>Blog Single</h2>
 							<ul class="bread-list">
-								<li><a href="index.html">Home</a></li>
+								<li><a href="{{url('')}}">Home</a></li>
 								<li><i class="icofont-simple-right"></i></li>
 								<li class="active">Blog Single</li>
 							</ul>
@@ -31,6 +31,7 @@
 					<div class="col-lg-8 col-12">
 						<div class="row">
 						@foreach($posts as $post)
+						<a href="{{route('blogD.show', $post->id)}}">
 							<div class="col-12">
 								<div class="single-main">
 									<!-- News Head -->
@@ -38,7 +39,7 @@
 										<img src="{{ asset('images/' . $post->image) }}" alt="L'mage de article">
 									</div>
 									<!-- News Title -->
-									<h1 class="news-title"><a href="news-single.html">{{ $post->titre }}</a></h1>
+									<h1 class="news-title"><a href="{{route('blogD.show', $post->id)}}">{{ $post->titre }}</a></h1>
 									<!-- Meta -->
 									<!-- <div class="meta">
 										<div class="meta-left">
@@ -52,7 +53,7 @@
 									</div> -->
 									<!-- News Text -->
 									<div class="news-text">
-										<p>{{ $post->contenu }}</p>
+										<p>{{ Str::limit($post->contenu, 100, '...') }}</p>
 										<!-- <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam. Nam ac risus vitae sem vehicula egestas. Sed velit nulla, viverra non commod</p> -->
 										<!-- <div class="image-gallery">
 											<div class="row">
@@ -93,7 +94,8 @@
 									</div>
 								</div>
 							</div>
-							@endforeach
+						</a>
+						@endforeach
 							<div class="col-12">
 								<!-- <div class="blog-comments">
 									<h2>All Comments</h2>
@@ -215,17 +217,19 @@
 								<h3 class="title"> Articles recent</h3>
 								<!-- Single Post -->
 								 @foreach($recentPosts as $recentPost)
+								<a href="{{route('blogD.show', $recentPost->id)}}"> 
 								<div class="single-post">
 									<div class="image">
 										<img src="{{ asset('images/' . $recentPost->image) }}" alt="#">
 									</div>
 									<div class="content">
-										<h5><a href="#">{{ $recentPost->titre }}.</a></h5>
+										<h5><a href="{{route('blogD.show', $recentPost->id)}}">{{ $recentPost->titre }}.</a></h5>
 										<ul class="comment">
 											<li><i class="fa fa-calendar" aria-hidden="true"></i>{{ $recentPost->created_at->format('d/m/Y') }}</li>
 										</ul>
 									</div>
 								</div>
+								</a>
 								@endforeach
 								<!-- End Single Post -->
 								<!-- Single Post -->

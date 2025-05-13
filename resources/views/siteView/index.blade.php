@@ -791,7 +791,8 @@
 				</div>
 				<div class="row">
 					@foreach($recentPosts as $recentPost)
-					<div class="col-lg-4 col-md-6 col-12">
+					<a href="{{route('blogD.show', $recentPost->id)}}">
+						<div class="col-lg-4 col-md-6 col-12">
 						<!-- Single Blog -->
 						<div class="single-news h-100">
 							<div class="news-head">
@@ -800,14 +801,15 @@
 							<div class="news-body">
 								<div class="news-content">
 									
-									<h2><a href="#"> <strong>{{ $recentPost->titre }}</strong></a></h2>
-									<p class="text">{{ $recentPost->contenu }}</p>
+									<h2><a href="{{route('blogD.show', $recentPost->id)}}"> <strong>{{ $recentPost->titre }}</strong></a></h2>
+									<p class="text">{{ Str::limit($recentPost->contenu, 100, '...') }}</p>
 									
 								</div>
 							</div>
 						</div>
 						<!-- End Single Blog -->
 					</div>
+					</a>
 					@endforeach
 				</div>
 			</div>
